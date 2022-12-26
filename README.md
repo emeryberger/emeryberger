@@ -2,14 +2,24 @@
 
 Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am also the creator/maintainer of https://CSrankings.org.
 
+## Recent blog posts
+
+- [**Coping with CoPilot**](https://blog.sigplan.org/2022/08/18/coping-with-copilot/) (SIGARCH/SIGPLAN)
+- [**Drop Whatever You're Researching and Start Working on Crypto!**](https://www.sigarch.org/drop-whatever-youre-researching-and-start-working-on-crypto/) (SIGARCH)
+- [**A Checklist Manifesto for Empirical Evaluation**](https://blog.sigplan.org/2019/08/28/a-checklist-manifesto-for-empirical-evaluation-a-preemptive-strike-against-a-replication-crisis-in-computer-science/) (SIGARCH/SIGPLAN)   
+  ([**SIGPLAN Empirical Evaluation Checklist PDF**](https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf))
+
+## Links
+
 - Home page: [emeryberger.com](https://emeryberger.com)
 - Blog: [Medium](https://emeryberger.medium.com)
 - Mastodon: [@emeryberger@discuss.systems](https://discuss.systems/@emeryberger)
 - Twitter (Mastodon preferred): [![Twitter Follow](https://img.shields.io/twitter/follow/emeryberger.svg?style=social)](https://twitter.com/emeryberger)
+- YouTube: [@EmeryBerger](https://www.youtube.com/@EmeryBerger) ![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)
 - Google Scholar: [Emery D. Berger](https://scholar.google.com/citations?user=RaHaArkAAAAJ&hl=en)
 - DBLP: [Emery D. Berger](https://dblp.org/pid/98/4487.html)
 
-## Software from me and my lab ([**PLASMA**](https://plasma-umass.org))
+## Selected software from me and my collaborators (for a full list, see [**PLASMA**](https://plasma-umass.org))
 
 - [**Scalene**](https://github.com/plasma-umass/scalene): A state-of-the-art CPU+GPU+memory profiler for Python  
   [![PyPI Latest Release](https://img.shields.io/pypi/v/scalene.svg)](https://pypi.org/project/scalene/)
@@ -23,6 +33,12 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
 
 - [**CSrankings**](https://csrankings.org): Ranks the world's CS departments  
   [![GitHub stars](https://img.shields.io/github/stars/emeryberger/CSrankings?style=social&label=Star&maxAge=2592000)](https://GitHub.com/emeryberger/CSrankings)
+
+- [**Slipcover**](https://github.com/plasma-umass/slipcover): Nearly zero-overhead code coverage analysis for Python   
+  [![PyPI Latest Release](https://img.shields.io/pypi/v/slipcover.svg)](https://pypi.org/project/slipcover/)
+  [![Downloads](https://pepy.tech/badge/slipcover)](https://pepy.tech/project/slipcover)
+  [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/slipcover?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/slipcover/)
+ 
 
 ## Selected Talks
 
@@ -40,6 +56,6 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
   
 ## Bio
 
-Emery Berger is a Professor in the [Manning College of Information and Computer Sciences](https://cics.umass.edu) at the University of Massachusetts Amherst, the flagship campus of the UMass system. He graduated with a Ph.D. in Computer Science from the University of Texas at Austin in 2002. Professor Berger has been a Visiting Scientist at Microsoft Research and at the Universitat Politècnica de Catalunya (UPC) / Barcelona Supercomputing Center (BSC). Professor Berger’s research spans programming languages, runtime systems, and operating systems, with a particular focus on systems that transparently improve reliability, security, and performance. He and his collaborators have created a number of influential software systems including [Hoard](https://github.com/emeryberger/Hoard), a fast and scalable memory manager that accelerates multithreaded applications (used by companies including British Telecom, Cisco, Crédit Suisse, Reuters, Royal Bank of Canada, SAP, and Tata, and [on which the Mac OS X memory manager is based](http://emeryblogger.wordpress.com/2010/10/26/im-a-mac-or-emery-inside/)); [DieHard](https://github.com/emeryberger/DieHard), an error-avoiding memory manager that [directly influenced the design of the Windows 7 Fault-Tolerant Heap](http://emeryblogger.wordpress.com/2010/04/06/winning-the-war-on-bugs/); and DieHarder, a secure memory manager that was an inspiration for hardening changes made to the Windows 8 heap (see this map of the [landscape of memory management research](https://github.com/plasma-umass/memory-landscape) for an overview). He also created and maintains the widely-used [CSrankings](https://csrankings.org) website.
+Emery Berger is a Professor in the [Manning College of Information and Computer Sciences](https://cics.umass.edu) at the [University of Massachusetts Amherst](https://www.umass.edu/), the flagship campus of the UMass system. He graduated with a [Ph.D. in Computer Science](https://repositories.lib.utexas.edu/handle/2152/455) from the [University of Texas at Austin](https://www.cs.utexas.edu/) in 2002. Professor Berger has been a Visiting Scientist at [Microsoft Research](https://www.microsoft.com/en-us/research) and at the [Universitat Politècnica de Catalunya (UPC)](https://www.ac.upc.edu/en) / [Barcelona Supercomputing Center (BSC)](https://bsc.es/). Professor Berger’s research spans programming languages, runtime systems, and operating systems, with a particular focus on systems that transparently improve reliability, security, and performance. He and his collaborators have created a number of influential software systems including [Hoard](https://github.com/emeryberger/Hoard), a fast and scalable memory manager that accelerates multithreaded applications (used by companies including British Telecom, Cisco, Crédit Suisse, Reuters, Royal Bank of Canada, SAP, and Tata, and [on which the Mac OS X memory manager is based](http://emeryblogger.wordpress.com/2010/10/26/im-a-mac-or-emery-inside/)); [DieHard](https://github.com/emeryberger/DieHard), an error-avoiding memory manager that [directly influenced the design of the Windows 7 Fault-Tolerant Heap](http://emeryblogger.wordpress.com/2010/04/06/winning-the-war-on-bugs/); and DieHarder, a secure memory manager that was an inspiration for hardening changes made to the Windows 8 heap (see this map of the [landscape of memory management research](https://github.com/plasma-umass/memory-landscape) for an overview). He also created and maintains the widely-used [CSrankings](https://csrankings.org) website.
 
-His honors include a Microsoft Research Fellowship, an NSF CAREER Award, a Lilly Teaching Fellowship, the [Distinguished Artifact Award for PLDI 2014](http://pldi14-aec.cs.brown.edu/), the [Most Influential Paper Award at OOPSLA 2012](http://sigplan.org/Awards/OOPSLA/), the [Most Influential Paper Award at PLDI 2016](http://www.sigplan.org/Awards/PLDI/), the [ASPLOS 2019 Influential Paper Award](https://www.sigops.org/2019/asplos-influential-paper-2019-winner/), five CACM Research Highlights ([1](https://doi.org/10.1145/1409360.1409382), [2](https://doi.org/10.1145/2927928), [3](https://doi.org/10.1145/3205911), [4](https://doi.org/10.1145/3422598), [5](https://doi.org/10.1145/3474385)), a Google Research Award, a Microsoft SEIF Award, and Best Paper Awards at FAST, OOPSLA, and SOSP; he was named an [ACM Fellow in 2019](https://awards.acm.org/award_winners/berger_4417531). Professor Berger served two terms as an elected member of the SIGPLAN Executive Committee; he served for a decade (2007-2017) as Associate Editor of the ACM Transactions on Programming Languages and Systems, was [Program Chair for PLDI 2016](https://pldi16.sigplan.org/committee/pldi-2016-program-committee), and served as [co-Program Chair of ASPLOS 2021](https://asplos-conference.org/2021/index.html%3Fp=44.html).
+His honors include a Microsoft Research Fellowship, an NSF CAREER Award, a Lilly Teaching Fellowship, the [Distinguished Artifact Award for PLDI 2014](http://pldi14-aec.cs.brown.edu/), the [Most Influential Paper Award at OOPSLA 2012](http://sigplan.org/Awards/OOPSLA/), the [Most Influential Paper Award at PLDI 2016](http://www.sigplan.org/Awards/PLDI/), the [ASPLOS 2019 Influential Paper Award](https://www.sigops.org/2019/asplos-influential-paper-2019-winner/), five CACM Research Highlights ([1](https://doi.org/10.1145/1409360.1409382), [2](https://doi.org/10.1145/2927928), [3](https://doi.org/10.1145/3205911), [4](https://doi.org/10.1145/3422598), [5](https://doi.org/10.1145/3474385)), a Google Research Award, a Microsoft SEIF Award, and Best Paper Awards at [FAST](https://www.usenix.org/conference/fast-07/tfs-transparent-file-system-contributory-storage), [OOPSLA](https://dl.acm.org/doi/10.1145/2660193.2660206), and [SOSP](https://dl.acm.org/doi/10.1145/2815400.2815409); he was named an [ACM Fellow in 2019](https://awards.acm.org/award_winners/berger_4417531). Professor Berger served two terms as an elected member of the SIGPLAN Executive Committee; he served for a decade (2007-2017) as Associate Editor of the ACM Transactions on Programming Languages and Systems, was [Program Chair for PLDI 2016](https://pldi16.sigplan.org/committee/pldi-2016-program-committee), and served as [co-Program Chair of ASPLOS 2021](https://asplos-conference.org/2021/index.html%3Fp=44.html).
