@@ -54,6 +54,19 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
 [How to Get Your Research Adopted (PLDI keynote)](https://youtube.be/kwto0AQ_Un8) ![views](https://img.shields.io/youtube/views/kwto0AQ_Un8)  
   [![PLDI 2022 keynote](https://img.youtube.com/vi/kwto0AQ_Un8/0.jpg)]([https://youtu.be/kwto0AQ_Un8](https://www.youtube.com/watch?v=kwto0AQ_Un8))
   
+## Selected Papers
+
+- [**Triangulating Python Performance with Scalene**](https://arxiv.org/pdf/2212.07597)   
+  [[software](https://github.com/plasma-umass/scalene)]
+- [**Coz: Finding Code that Counts with Causal Profiling**](http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf) (Best Paper Award SOSP 2015, CACM Research Highlight)   
+  [[software](https://github.com/plasma-umass/coz)]
+- [**Mesh: Compacting Memory Management for C/C++ Applications**](https://people.cs.umass.edu/~mcgregor/papers/19-pldi.pdf) (PLDI 2019)   
+  [[software](https://github.com/plasma-umass/mesh)]
+- [**BLeak: Automatically Debugging Memory Leaks in Web Applications**](https://jvilk.com/assets/pdf/bleak.pdf) (PLDI 2018)   
+  [[software](https://github.com/plasma-umass/BLeak)] [_incorporated into Android Studio_](https://cs.android.com/android-studio/platform/tools/adt/idea/+/mirror-goog-studio-main:bleak/src/com/android/tools/idea/bleak/Bleak.kt)
+- [**Hoard: A Scalable Memory Allocator for Multithreaded Applications**](https://people.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf) (ASPLOS 2000, ASPLOS Most Influential Paper)   
+  [[software](https://github.com/emeryberger/Hoard)] [_incorporated into Mac OS X allocator_](https://opensource.apple.com/source/libmalloc/libmalloc-116.50.8/src/magazine_malloc.c.auto.html)
+
 ## Bio
 
 Emery Berger is a Professor in the [Manning College of Information and Computer Sciences](https://cics.umass.edu) at the [University of Massachusetts Amherst](https://www.umass.edu/), the flagship campus of the UMass system. He graduated with a [Ph.D. in Computer Science](https://repositories.lib.utexas.edu/handle/2152/455) from the [University of Texas at Austin](https://www.cs.utexas.edu/) in 2002. Professor Berger has been a Visiting Scientist at [Microsoft Research](https://www.microsoft.com/en-us/research) and at the [Universitat Politècnica de Catalunya (UPC)](https://www.ac.upc.edu/en) / [Barcelona Supercomputing Center (BSC)](https://bsc.es/).
