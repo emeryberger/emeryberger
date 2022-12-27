@@ -11,13 +11,9 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
 
 ## Links
 
-- Home page: [emeryberger.com](https://emeryberger.com)
-- Blog: [Medium](https://emeryberger.medium.com)
-- Mastodon: [@emeryberger@discuss.systems](https://discuss.systems/@emeryberger)
-- Twitter (Mastodon preferred): [![Twitter Follow](https://img.shields.io/twitter/follow/emeryberger.svg?style=social)](https://twitter.com/emeryberger)
-- YouTube: [@EmeryBerger](https://www.youtube.com/@EmeryBerger) ![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)
-- Google Scholar: [Emery D. Berger](https://scholar.google.com/citations?user=RaHaArkAAAAJ&hl=en)
-- DBLP: [Emery D. Berger](https://dblp.org/pid/98/4487.html)
+- [emeryberger.com](https://emeryberger.com), [Medium blog](https://emeryberger.medium.com), Mastodon: [@emeryberger@discuss.systems](https://discuss.systems/@emeryberger), Twitter (deprecated): [![Twitter Follow](https://img.shields.io/twitter/follow/emeryberger.svg?style=social)](https://twitter.com/emeryberger)
+- [YouTube @EmeryBerger](https://www.youtube.com/@EmeryBerger) ![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)
+- Publications: [Google Scholar](https://scholar.google.com/citations?user=RaHaArkAAAAJ&hl=en), [DBLP](https://dblp.org/pid/98/4487.html)
 
 ## Selected software from me and my collaborators (for a full list, see [**PLASMA**](https://plasma-umass.org))
 
@@ -27,13 +23,10 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
   [![Downloads](https://pepy.tech/badge/scalene)](https://pepy.tech/project/scalene)
   [![Downloads](https://pepy.tech/badge/scalene/month)](https://pepy.tech/project/scalene)
   [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/scalene?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/scalene/)
-
 - [**Coz**](https://github.com/plasma-umass/coz): A _causal profiler_ that tells you where to optimize your code (C/C++/Rust/Swift/Java)  
   [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/coz?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/coz/)
-
 - [**CSrankings**](https://csrankings.org): Ranks the world's CS departments  
   [![GitHub stars](https://img.shields.io/github/stars/emeryberger/CSrankings?style=social&label=Star&maxAge=2592000)](https://GitHub.com/emeryberger/CSrankings)
-
 - [**Slipcover**](https://github.com/plasma-umass/slipcover): Nearly zero-overhead code coverage analysis for Python   
   [![PyPI Latest Release](https://img.shields.io/pypi/v/slipcover.svg)](https://pypi.org/project/slipcover/)
   [![Downloads](https://pepy.tech/badge/slipcover)](https://pepy.tech/project/slipcover)
