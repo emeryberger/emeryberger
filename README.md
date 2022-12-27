@@ -35,7 +35,8 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
 
 ## Selected Talks
 
-[Performance Matters (Strange Loop 2019)](https://youtu.be/r-TLSBdHe1A) ![views](https://img.shields.io/youtube/views/r-TLSBdHe1A)  
+[Performance Matters (Strange Loop 2019)](https://youtu.be/r-TLSBdHe1A) ![views](https://img.shields.io/youtube/views/r-TLSBdHe1A)   
+The second most popular Strange Loop video of all time!  
   [![Performance Matters (Strange Loop 2019)](https://img.youtube.com/vi/r-TLSBdHe1A/0.jpg)](https://youtu.be/r-TLSBdHe1A)
 
 [Python Performance Matters (Strange Loop 2022)](https://youtu.be/vVUnCXKuNOg)  
@@ -49,7 +50,7 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
   
 ## Selected Papers
 
-- [**Triangulating Python Performance with Scalene**](https://arxiv.org/pdf/2212.07597)   
+- [**Triangulating Python Performance with Scalene**](https://arxiv.org/pdf/2212.07597) (arXiv)   
   Introduces Scalene, a profiler that highlights Python performance issues. [[software](https://github.com/plasma-umass/scalene)]
 - [**Coz: Finding Code that Counts with Causal Profiling**](http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf) (Best Paper Award SOSP 2015, CACM Research Highlight)   
   Introduces causal profiling and the Coz profiler. [[software](https://github.com/plasma-umass/coz)]
