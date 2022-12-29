@@ -11,8 +11,12 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
 
 ## Links
 
-- [emeryberger.com](https://emeryberger.com), [Medium blog](https://emeryberger.medium.com), Mastodon: [@emeryberger@discuss.systems](https://discuss.systems/@emeryberger), Twitter (deprecated): [![Twitter Follow](https://img.shields.io/twitter/follow/emeryberger.svg?style=social)](https://twitter.com/emeryberger)
-- [YouTube @EmeryBerger](https://www.youtube.com/@EmeryBerger) ![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)
+- PLASMA lab GitHub: [![PLASMA](https://img.shields.io/github/stars/plasma-umass?style=social)](https://github.com/plasma-umass)
+- Personal GitHub: [![EmeryBerger](https://img.shields.io/github/stars/emeryberger?style=social)](https://github.com/emeryberger)
+- Mastodon: [![Mastodon Follow](https://img.shields.io/mastodon/follow/109334066336092137?domain=https%3A%2F%2Fdiscuss.systems&style=social)](https://discuss.systems/@emeryberger)
+- Twitter (deprecated): [![Twitter Follow](https://img.shields.io/twitter/follow/emeryberger.svg?style=social)](https://twitter.com/emeryberger)
+- YouTube: [![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)](https://www.youtube.com/@EmeryBerger)
+- [emeryberger.com](https://emeryberger.com), [Medium blog](https://emeryberger.medium.com)
 - Publications: [Google Scholar](https://scholar.google.com/citations?user=RaHaArkAAAAJ&hl=en), [DBLP](https://dblp.org/pid/98/4487.html)
 
 ## Selected software from me and my collaborators (for a full list, see [**PLASMA**](https://plasma-umass.org))
