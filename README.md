@@ -54,7 +54,7 @@ The second most popular Strange Loop video of all time!
   
 ## Selected Papers
 
-- [**Triangulating Python Performance with Scalene**](https://arxiv.org/pdf/2212.07597) (arXiv)   
+- [**Triangulating Python Performance with Scalene**](https://arxiv.org/pdf/2212.07597) (OSDI 2023, to appear)   
   Introduces Scalene, a profiler that highlights Python performance issues. [[software](https://github.com/plasma-umass/scalene)]
 - [**Coz: Finding Code that Counts with Causal Profiling**](http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf) (Best Paper Award SOSP 2015, CACM Research Highlight)   
   Introduces causal profiling and the Coz profiler. [[software](https://github.com/plasma-umass/coz)]
