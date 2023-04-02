@@ -62,6 +62,9 @@ The second most popular Strange Loop video of all time!
   A drop-in replacement for `malloc` that eliminates fragmentation. [[software](https://github.com/plasma-umass/mesh)]
 - [**BLeak: Automatically Debugging Memory Leaks in Web Applications**](https://jvilk.com/assets/pdf/bleak.pdf) (PLDI 2018, CACM Research Highlight)   
   Detects memory leaks in web applications automatically. [[software](https://github.com/plasma-umass/BLeak)] [_incorporated into Android Studio_](https://cs.android.com/android-studio/platform/tools/adt/idea/+/mirror-goog-studio-main:bleak/src/com/android/tools/idea/bleak/Bleak.kt)
+- [**Stabilizer: Statistically Sound Performance Evaluation**](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) (ASPLOS 2013)
+  Shows why dynamically randomizing "everything" unlocks statistically rigorous performance analysis
+ [_incorporated into the Wasmtime/Cranelift benchmarking infrastructure_](https://mastodon.world/@cfallin/109833747279454645)
 - [**Reconsidering Custom Memory Allocation**](https://people.cs.umass.edu/~emery/pubs/berger-oopsla2002.pdf) (OOPSLA 2012, Most Influential Paper)   
   Shows which kinds of custom memory allocators are useful for improving performance (TL;DR - not many).
 - [**Hoard: A Scalable Memory Allocator for Multithreaded Applications**](https://people.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf) (ASPLOS 2000, ASPLOS Most Influential Paper)   
