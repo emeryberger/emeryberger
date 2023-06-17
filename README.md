@@ -14,14 +14,14 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
 - PLASMA lab GitHub: [![PLASMA](https://img.shields.io/github/stars/plasma-umass?style=social)](https://github.com/plasma-umass)
 - Personal GitHub: [![EmeryBerger](https://img.shields.io/github/stars/emeryberger?style=social)](https://github.com/emeryberger)
 - Mastodon: [![Mastodon Follow](https://img.shields.io/mastodon/follow/109334066336092137?domain=https%3A%2F%2Fdiscuss.systems&style=social)](https://discuss.systems/@emeryberger)
-- Twitter (deprecated): [@emeryberger](https://twitter.com/emeryberger)
+- Twitter: [@emeryberger](https://twitter.com/emeryberger)
 - YouTube: [![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)](https://www.youtube.com/@EmeryBerger)
 - [emeryberger.com](https://emeryberger.com), [Medium blog](https://emeryberger.medium.com)
 - Publications: [Google Scholar](https://scholar.google.com/citations?user=RaHaArkAAAAJ&hl=en), [DBLP](https://dblp.org/pid/98/4487.html)
 
 ## Selected software from me and my collaborators (for a full list, see [**PLASMA**](https://plasma-umass.org))
 
-- [**Scalene**](https://github.com/plasma-umass/scalene): A state-of-the-art CPU+GPU+memory profiler for Python  
+- [**Scalene**](https://github.com/plasma-umass/scalene): A state-of-the-art CPU+GPU+memory profiler for Python, with AI-powered optimization suggestions  
   [![PyPI Latest Release](https://img.shields.io/pypi/v/scalene.svg)](https://pypi.org/project/scalene/)
   [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scalene/badges/version.svg)](https://conda.anaconda.org/conda-forge/scalene)
   [![Downloads](https://pepy.tech/badge/scalene)](https://pepy.tech/project/scalene)
@@ -35,6 +35,23 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
   [![PyPI Latest Release](https://img.shields.io/pypi/v/slipcover.svg)](https://pypi.org/project/slipcover/)
   [![Downloads](https://pepy.tech/badge/slipcover)](https://pepy.tech/project/slipcover)
   [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/slipcover?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/slipcover/)
+- [**ChatDBG**](https://github.com/plasma-umass/ChatDBG): AI-assisted debugging in `lldb`, `gdb`, and `pdb`. Uses AI to answer 'why'  
+  [![PyPI Latest Release](https://img.shields.io/pypi/v/ChatDBG.svg)](https://pypi.org/project/ChatDBG/)
+  [![Downloads](https://pepy.tech/badge/ChatDBG)](https://pepy.tech/project/ChatDBG)
+  [![Downloads](https://pepy.tech/badge/ChatDBG/month)](https://pepy.tech/project/ChatDBG)
+  [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/ChatDBG?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/ChatDBG/)
+- [**Commentator**](https://github.com/plasma-umass/commentator): Automatically comments Python code, adding docstrings and type annotations  
+  [![PyPI Latest Release](https://img.shields.io/pypi/v/python-commentator.svg)](https://pypi.org/project/python-commentator/)
+  [![Downloads](https://pepy.tech/badge/python-commentator)](https://pepy.tech/project/python-commentator)
+  [![Downloads](https://pepy.tech/badge/python-commentator/month)](https://pepy.tech/project/python-commentator)
+  [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/commentator?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/commentator/)
+- [**CWhy**](https://github.com/plasma-umass/CWhy): ("See why") Explains and suggests fixes for C/C++/Rust compiler error messages.  
+  [![PyPI Latest Release](https://img.shields.io/pypi/v/CWhy.svg)](https://pypi.org/project/CWhy/)
+  [![Downloads](https://pepy.tech/badge/CWhy)](https://pepy.tech/project/CWhy)
+  [![Downloads](https://pepy.tech/badge/CWhy/month)](https://pepy.tech/project/CWhy)
+  [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/CWhy?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/CWhy/)
+- [**SQLwrite**](https://github.com/plasma-umass/sqlwrite): SQLite3 with natural language to SQL, recommends indexes to optimize queries  
+  [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/sqlwrite?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/sqlwrite/)
  
 
 ## Selected Talks
