@@ -28,7 +28,7 @@ Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collab
   [![Downloads](https://pepy.tech/badge/scalene/month)](https://pepy.tech/project/scalene)
   [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/scalene?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/scalene/)
 - [**Coz**](https://github.com/plasma-umass/coz): A _causal profiler_ that tells you where to optimize your code (C/C++/Rust/Swift/Java)  
-  [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/coz?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/coz/)
+  [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/coz?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/coz/) [![Rust crate downloads](https://img.shields.io/crates/d/coz)](https://img.shields.io/crates/d/coz) <small>_(just counting Rust crate downloads)_</small>
 - [**CSrankings**](https://csrankings.org): Ranks the world's CS departments  
   [![GitHub stars](https://img.shields.io/github/stars/emeryberger/CSrankings?style=social&label=Star&maxAge=2592000)](https://GitHub.com/emeryberger/CSrankings)
 - [**Slipcover**](https://github.com/plasma-umass/slipcover): Nearly zero-overhead code coverage analysis for Python   
