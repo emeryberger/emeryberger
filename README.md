@@ -1,6 +1,6 @@
 # Emery Berger
 
-Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am also the creator/maintainer of https://CSrankings.org.
+Professor, Computer Science, Univ. of Massachusetts Amherst. My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am also the creator/maintainer of https://CSrankings.org. For the academic year 2023/2024, I am on sabbatical and am an Amazon Scholar at Amazon Web Services.
 
 ## Recent blog posts
 
