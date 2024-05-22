@@ -66,7 +66,7 @@ The second most popular Strange Loop video of all time!
 [Scalene (PyCon 2021)](https://youtu.be/nrQPqy3YY5A) ![views](https://img.shields.io/youtube/views/nrQPqy3YY5A)  
   [![Scalene (PyCon 2021)](https://img.youtube.com/vi/nrQPqy3YY5A/0.jpg)](https://youtu.be/nrQPqy3YY5A)
 
-[How to Get Your Research Adopted (PLDI keynote)](https://youtube.be/kwto0AQ_Un8) ![views](https://img.shields.io/youtube/views/kwto0AQ_Un8)  
+[How to Get Your Research Adopted (PLDI keynote)](https://youtu.be/kwto0AQ_Un8) ![views](https://img.shields.io/youtube/views/kwto0AQ_Un8)  
   [![PLDI 2022 keynote](https://img.youtube.com/vi/kwto0AQ_Un8/0.jpg)]([https://youtu.be/kwto0AQ_Un8](https://www.youtube.com/watch?v=kwto0AQ_Un8))
   
 ## Selected Papers
@@ -89,7 +89,7 @@ The second most popular Strange Loop video of all time!
 
 ## Bio
 
-Emery Berger is a Professor in the [Manning College of Information and Computer Sciences](https://cics.umass.edu) at the [University of Massachusetts Amherst](https://www.umass.edu/), the flagship campus of the UMass system. He graduated with a [Ph.D. in Computer Science](https://repositories.lib.utexas.edu/handle/2152/455) from the [University of Texas at Austin](https://www.cs.utexas.edu/) in 2002. Professor Berger has been a Visiting Scientist at [Microsoft Research](https://www.microsoft.com/en-us/research) and at the [Universitat Politècnica de Catalunya (UPC)](https://www.ac.upc.edu/en) / [Barcelona Supercomputing Center (BSC)](https://bsc.es/).
+Emery Berger is a Professor in the [Manning College of Information and Computer Sciences](https://cics.umass.edu) at the [University of Massachusetts Amherst](https://www.umass.edu/), the flagship campus of the UMass system; he is also an Amazon Scholar. He graduated with a [Ph.D. in Computer Science](https://repositories.lib.utexas.edu/handle/2152/455) from the [University of Texas at Austin](https://www.cs.utexas.edu/) in 2002. Professor Berger has been a Visiting Scientist at [Microsoft Research](https://www.microsoft.com/en-us/research) and at the [Universitat Politècnica de Catalunya (UPC)](https://www.ac.upc.edu/en) / [Barcelona Supercomputing Center (BSC)](https://bsc.es/).
 
 Professor Berger’s research spans programming languages, runtime systems, and operating systems, with a particular focus on systems that transparently improve reliability, security, and performance. He and his collaborators have created a number of influential software systems including [Hoard](https://github.com/emeryberger/Hoard), a fast and scalable memory manager that accelerates multithreaded applications (used by companies including British Telecom, Cisco, Crédit Suisse, Reuters, Royal Bank of Canada, SAP, and Tata, and [on which the Mac OS X memory manager is based](http://emeryblogger.wordpress.com/2010/10/26/im-a-mac-or-emery-inside/)); [DieHard](https://github.com/emeryberger/DieHard), an error-avoiding memory manager that [directly influenced the design of the Windows 7 Fault-Tolerant Heap](http://emeryblogger.wordpress.com/2010/04/06/winning-the-war-on-bugs/); and DieHarder, a secure memory manager that was an inspiration for hardening changes made to the Windows 8 heap (see this map of the [landscape of memory management research](https://github.com/plasma-umass/memory-landscape) for an overview). He also created and maintains the widely-used [CSrankings](https://csrankings.org) website.
 
