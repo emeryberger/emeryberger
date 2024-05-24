@@ -5,6 +5,7 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 
 ## Recent blog posts
 
+- [**AI Software Should be More Like Plain Old Software**](https://www.sigarch.org/ai-software-should-be-more-like-plain-old-software/) (SIGARCH/[SIGPLAN](https://blog.sigplan.org/2024/04/23/ai-software-should-be-more-like-plain-old-software/))
 - [**Coping with CoPilot**](https://blog.sigplan.org/2022/08/18/coping-with-copilot/) (SIGARCH/SIGPLAN)
 - [**Drop Whatever You're Researching and Start Working on Crypto!**](https://www.sigarch.org/drop-whatever-youre-researching-and-start-working-on-crypto/) (SIGARCH)
 - [**A Checklist Manifesto for Empirical Evaluation**](https://blog.sigplan.org/2019/08/28/a-checklist-manifesto-for-empirical-evaluation-a-preemptive-strike-against-a-replication-crisis-in-computer-science/) (SIGARCH/SIGPLAN)   
