@@ -11,6 +11,13 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 - [**A Checklist Manifesto for Empirical Evaluation**](https://blog.sigplan.org/2019/08/28/a-checklist-manifesto-for-empirical-evaluation-a-preemptive-strike-against-a-replication-crisis-in-computer-science/) (SIGARCH/SIGPLAN)   
   ([**SIGPLAN Empirical Evaluation Checklist PDF**](https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf))
 
+## Current PhD Students
+
+- [Kyla Levin](https://khlevin.github.io/KylaHLevin/)
+- [Juan Altmayer Pizzorno](https://jaltmayerpizzorno.github.io/)
+- [Sam Stern](https://samstern.me/)
+- [Nicolas van Kempen](https://nvankempen.com/)
+
 ## Links
 
 - PLASMA lab GitHub: [![PLASMA](https://img.shields.io/github/stars/plasma-umass?style=social)](https://github.com/plasma-umass)
