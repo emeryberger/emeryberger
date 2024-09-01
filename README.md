@@ -1,7 +1,7 @@
 # Emery Berger
 
 Professor, Computer Science, Univ. of Massachusetts Amherst. I am also an Amazon Scholar at Amazon Web Services.
-My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am the creator/maintainer of https://CSrankings.org. For the academic year 2023/2024, I am on sabbatical.
+My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am the creator/maintainer of https://CSrankings.org. For the academic year 2024/2025, I am splitting my time between UMass and Amazon.
 
 ## Recent blog posts
 
@@ -10,13 +10,6 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 - [**Drop Whatever You're Researching and Start Working on Crypto!**](https://www.sigarch.org/drop-whatever-youre-researching-and-start-working-on-crypto/) (SIGARCH)
 - [**A Checklist Manifesto for Empirical Evaluation**](https://blog.sigplan.org/2019/08/28/a-checklist-manifesto-for-empirical-evaluation-a-preemptive-strike-against-a-replication-crisis-in-computer-science/) (SIGARCH/SIGPLAN)   
   ([**SIGPLAN Empirical Evaluation Checklist PDF**](https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf))
-
-## Current PhD Students
-
-- [Kyla Levin](https://khlevin.github.io/KylaHLevin/)
-- [Juan Altmayer Pizzorno](https://jaltmayerpizzorno.github.io/)
-- [Sam Stern](https://samstern.me/)
-- [Nicolas van Kempen](https://nvankempen.com/)
 
 ## Links
 
@@ -27,6 +20,31 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 - YouTube: [![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)](https://www.youtube.com/@EmeryBerger)
 - [emeryberger.com](https://emeryberger.com), [Medium blog](https://emeryberger.medium.com)
 - Publications: [Google Scholar](https://scholar.google.com/citations?user=RaHaArkAAAAJ&hl=en), [DBLP](https://dblp.org/pid/98/4487.html)
+
+## PhD Students
+
+- [Kyla Levin](https://khlevin.github.io/KylaHLevin/)
+- [Juan Altmayer Pizzorno](https://jaltmayerpizzorno.github.io/)
+- [Bobby Powers](https://www.linkedin.com/in/bobby-powers-0639b81a/)
+- [Sam Stern](https://samstern.me/)
+- [Nicolas van Kempen](https://nvankempen.com/)
+
+### PhD Alumni
+- [Dan Barowy](https://www.cs.williams.edu/~dbarowy/), Williams College
+- [Charlie Curtsinger](https://curtsinger.cs.grinnell.edu/), Grinnell College
+- [Matthew Hertz](https://cse.buffalo.edu/~mhertz/), University of Buffalo
+- [Tongping Liu](https://www.linkedin.com/in/tongping-liu-b6b64415/), ByteDance
+- [Gene Novark](https://www.linkedin.com/in/gene-novark-183a4b20/), "Quantitative Hedge Fund"
+- [John Vilk](https://jvilk.com/), Stripe
+- [Ting Yang](https://www.linkedin.com/in/tingyang/), Meta (co-advised with Eliot Moss)
+
+## MS Alumni
+
+- [Justin Aquadro](https://www.linkedin.com/in/justin-aquadro-4547561a/), MachineMetrics
+- [Breanna Devore-McDonald](https://www.linkedin.com/in/bdevorem/), Untether AI
+- [Yi Feng](https://www.linkedin.com/in/yi-feng-0b10241bb/), Google
+- [Nitin Gupta](https://www.linkedin.com/in/nitingupta910/), Netflix
+- [Vitaly Lvin](https://www.linkedin.com/in/vitaliyl/), Google
 
 ## Selected software from me and my collaborators (for a full list, see [**PLASMA**](https://plasma-umass.org))
 
