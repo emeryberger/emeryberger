@@ -1,7 +1,9 @@
 # Emery Berger
 
-Professor, Computer Science, Univ. of Massachusetts Amherst. I am also an Amazon Scholar at Amazon Web Services.
+Professor, Computer Science, Univ. of Massachusetts Amherst, Amazon Scholar at Amazon Web Services.
 My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am the creator/maintainer of https://CSrankings.org. For the academic year 2024/2025, I am splitting my time between UMass and Amazon.
+
+[Current CV](https://github.com/emeryberger/vita.pdf)
 
 ## Recent blog posts
 
