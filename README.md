@@ -19,6 +19,7 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 
 - PLASMA lab GitHub: [![PLASMA](https://img.shields.io/github/stars/plasma-umass?style=social)](https://github.com/plasma-umass)
 - Personal GitHub: [![EmeryBerger](https://img.shields.io/github/stars/emeryberger?style=social)](https://github.com/emeryberger)
+- Bluesky: [@emeryberger.bsky.social](https://bsky.app/profile/emeryberger.bsky.social)
 - Mastodon: [![Mastodon Follow](https://img.shields.io/mastodon/follow/109334066336092137?domain=https%3A%2F%2Fdiscuss.systems&style=social)](https://discuss.systems/@emeryberger)
 - Twitter: [@emeryberger](https://twitter.com/emeryberger)
 - YouTube: [![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)](https://www.youtube.com/@EmeryBerger)
