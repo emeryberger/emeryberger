@@ -30,7 +30,6 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 
 - [Kyla Levin](https://khlevin.github.io/KylaHLevin/)
 - [Juan Altmayer Pizzorno](https://jaltmayerpizzorno.github.io/)
-- [Bobby Powers](https://www.linkedin.com/in/bobby-powers-0639b81a/)
 - [Sam Stern](https://samstern.me/)
 - [Nicolas van Kempen](https://nvankempen.com/)
 
@@ -40,6 +39,7 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 - [Matthew Hertz](https://cse.buffalo.edu/~mhertz/), University of Buffalo
 - [Tongping Liu](https://www.linkedin.com/in/tongping-liu-b6b64415/), ByteDance
 - [Gene Novark](https://www.linkedin.com/in/gene-novark-183a4b20/), "Quantitative Hedge Fund"
+- [Bobby Powers](https://www.linkedin.com/in/bobby-powers-0639b81a/), Stripe
 - [John Vilk](https://jvilk.com/), Stripe
 - [Ting Yang](https://www.linkedin.com/in/tingyang/), Meta (co-advised with Eliot Moss)
 
