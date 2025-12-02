@@ -13,10 +13,13 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 - [**A Checklist Manifesto for Empirical Evaluation**](https://blog.sigplan.org/2019/08/28/a-checklist-manifesto-for-empirical-evaluation-a-preemptive-strike-against-a-replication-crisis-in-computer-science/) (SIGARCH/SIGPLAN)   
   ([**SIGPLAN Empirical Evaluation Checklist PDF**](https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf))
 
+[Older blog posts](https://github.com/emeryberger/emeryberger/tree/main/blog)
+
 ## Links
 
 - PLASMA lab GitHub: [![PLASMA](https://img.shields.io/github/stars/plasma-umass?style=social)](https://github.com/plasma-umass)
 - Personal GitHub: [![EmeryBerger](https://img.shields.io/github/stars/emeryberger?style=social)](https://github.com/emeryberger)
+- Bluesky: [@emeryberger.bsky.social](https://bsky.app/profile/emeryberger.bsky.social)
 - Mastodon: [![Mastodon Follow](https://img.shields.io/mastodon/follow/109334066336092137?domain=https%3A%2F%2Fdiscuss.systems&style=social)](https://discuss.systems/@emeryberger)
 - Twitter: [@emeryberger](https://twitter.com/emeryberger)
 - YouTube: [![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)](https://www.youtube.com/@EmeryBerger)
@@ -27,7 +30,6 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 
 - [Kyla Levin](https://khlevin.github.io/KylaHLevin/)
 - [Juan Altmayer Pizzorno](https://jaltmayerpizzorno.github.io/)
-- [Bobby Powers](https://www.linkedin.com/in/bobby-powers-0639b81a/)
 - [Sam Stern](https://samstern.me/)
 - [Nicolas van Kempen](https://nvankempen.com/)
 
@@ -37,6 +39,7 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 - [Matthew Hertz](https://cse.buffalo.edu/~mhertz/), University of Buffalo
 - [Tongping Liu](https://www.linkedin.com/in/tongping-liu-b6b64415/), ByteDance
 - [Gene Novark](https://www.linkedin.com/in/gene-novark-183a4b20/), "Quantitative Hedge Fund"
+- [Bobby Powers](https://www.linkedin.com/in/bobby-powers-0639b81a/), Stripe
 - [John Vilk](https://jvilk.com/), Stripe
 - [Ting Yang](https://www.linkedin.com/in/tingyang/), Meta (co-advised with Eliot Moss)
 

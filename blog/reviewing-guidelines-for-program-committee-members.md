@@ -1,13 +1,12 @@
-[Reviewing Guidelines for Program Committee Members](https://emeryblogger.com/2018/03/22/reviewing-guidelines-for-program-committee-members/)
-=============================================================================================================================================
+# Reviewing Guidelines for Program Committee Members
 
-[March 22, 2018](https://emeryblogger.com/2018/03/22/reviewing-guidelines-for-program-committee-members/) [Edit](https://wordpress.com/post/emeryblogger.com/519)
+March 22, 2018
 
 I prepared these guidelines for the PLDI Program Committee when I was program chair in 2016. I am posting this lightly-edited version in the hopes that it will be useful to other program chairs. Feel free to adapt some or all of it for your own use; if you do so, I just ask that you cite this page and point me to your page in the hopes of providing an easy go-to for future program chairs and PC members. Thanks!
 
 * * * * *
 
-Reviewing Guidelines
+## Reviewing Guidelines
 
 All committee members are expected to:
 
@@ -33,9 +32,9 @@ Reviews will take the following questions into account:
 
 A key part of ensuring quality reviews is making sure that papers are reviewed by experts. All reviewers will indicate specifically what the nature of their expertise is with respect to each paper, e.g., "I have written papers (X, Y, & Z) on this topic."
 
-*Guardians: *One reviewer will be appointed as a "guardian" to lead all discussions and ensure that author responses are read and addressed. The guardian will also ensure that final reviews include a summary of the online and/or PC discussion to explain decisions for acceptance/rejection.
+**Guardians**: One reviewer will be appointed as a "guardian" to lead all discussions and ensure that author responses are read and addressed. The guardian will also ensure that final reviews include a summary of the online and/or PC discussion to explain decisions for acceptance/rejection.
 
-BIDDING
+## BIDDING
 
 *This section is adapted from the bidding instructions from POPL 2015.*
 
@@ -67,7 +66,7 @@ When bidding, you won't have to read the entire paper (though, of course, you ar
 
 Entering bids in HotCRP: There is more than one way you can enter bids in to HotCRP. One way to begin is to go the [reviewer preferences page](https://pldi16.hotcrp.com/reviewprefs). There, you will see a list that shows all submitted papers. You may enter your preferences in the text boxes here. Alternatively, you may flip through the paper pages (use keys k and j to flip forwards and backwards through the paper pages efficiently). If you go through the papers in numeric order, flip a coin first to decide whether you will go through them back to front or front to back. You may also upload preferences from a text file; see the "Download" and "Upload" links below the paper list on your review preferences page.
 
-SHEPHERDING
+## SHEPHERDING
 
 PLDI 2016 will be shepherding *all* accepted papers. Please write your reviews taking this into account. We are doing this for a variety of reasons, including improving paper quality and letting us accept papers with flaws that can easily be fixed. Shepherding will enforce that all *minor* changes requested by reviewers are incorporated in the final paper. Making this apply to all papers means that there will be no stigma attached to having a paper shepherded.
 
@@ -77,7 +76,7 @@ However, there is a limit to how much we can expect of the shepherding process. 
 
 In your reviews (either in the comments to authors, the PC, or both), please feel free to point out things that will need to be addressed during shepherding.
 
-FAQ
+## FAQ
 
 1.  Who is reviewing PC member submissions?
     -   The new *External Program Committee* will be responsible for reviewing all PC submissions.
