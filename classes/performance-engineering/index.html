@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>COMPSCI 490PF/690PF: Performance Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --fg: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --border: #1f2937;
+      --card-bg: #020617;
+      --link: #38bdf8;
+      --link-hover: #7dd3fc;
+      --code-bg: #020617;
+      --badge-bg: #0f172a;
+      --badge-fg: #e5e7eb;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.65);
+      --radius-lg: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 52%, #000 100%);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    header {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .header-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .course-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .course-code {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .course-name {
+      font-weight: 650;
+      font-size: 1.15rem;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .badge {
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .badge-dot {
+      width: 0.35rem;
+      height: 0.35rem;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+    }
+
+    main {
+      max-width: 1024px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 0 1.25rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.4fr) minmax(260px, 1.2fr);
+      gap: 1.75rem;
+    }
+
+    @media (max-width: 880px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: radial-gradient(circle at top left,
+        rgba(30, 64, 175, 0.25),
+        rgba(15, 23, 42, 0.98));
+      border-radius: var(--radius-lg);
+      padding: 1.3rem 1.4rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.25), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(147, 51, 234, 0.24), transparent 55%);
+      mix-blend-mode: screen;
+      opacity: 0.55;
+      z-index: -1;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-top: 1.1rem;
+      margin-bottom: 0.2rem;
+      font-weight: 550;
+    }
+
+    .card p {
+      margin: 0.35rem 0;
+      color: var(--fg);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 0.22rem 0.55rem;
+      font-size: 0.72rem;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    dl {
+      margin: 0.4rem 0;
+    }
+
+    dt {
+      font-weight: 550;
+      margin-top: 0.4rem;
+    }
+
+    dd {
+      margin: 0.1rem 0 0.2rem 0;
+      color: var(--fg);
+    }
+
+    ul,
+    ol {
+      margin: 0.3rem 0 0.5rem 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.12rem 0;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .grade-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .grade-table th,
+    .grade-table td {
+      padding: 0.3rem 0.45rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      text-align: left;
+    }
+
+    .grade-table th {
+      background: rgba(15, 23, 42, 0.85);
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .schedule-week {
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+    }
+
+    .schedule-week:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .week-title {
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .reading-list {
+      margin: 0.25rem 0 0 0;
+      padding-left: 1.1rem;
+    }
+
+    footer {
+      max-width: 1024px;
+      margin: 0 auto 2rem;
+      padding: 0 1.25rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      margin-top: 0.4rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    .nav-links a {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--link-hover);
+      border-color: var(--accent);
+    }
+
+    .notice {
+      padding: 0.4rem 0.6rem;
+      border-radius: 0.75rem;
+      background: rgba(148, 163, 184, 0.1);
+      font-size: 0.82rem;
+      margin-top: 0.35rem;
+    }
+
+    code {
+      font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
+      font-size: 0.86rem;
+      background: var(--code-bg);
+      padding: 0.12rem 0.3rem;
+      border-radius: 0.35rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .highlight-box {
+      margin-top: 0.4rem;
+      padding: 0.5rem 0.65rem;
+      border-radius: 0.9rem;
+      background: rgba(8, 47, 73, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      font-size: 0.88rem;
+    }
+
+    .highlight-box strong {
+      color: var(--accent);
+    }
+
+    .stacked {
+      display: flex;
+      flex-direction: column;
+      gap: 0.28rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="course-title">
+        <div class="course-code">COMPSCI 490PF / 690PF · Spring</div>
+        <div class="course-name">Performance Engineering</div>
+      </div>
+      <div>
+        <div class="badges">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            In-person · Non-hybrid
+          </div>
+          <div class="badge">3 Credits</div>
+          <div class="badge">Advanced UG / Grad</div>
+        </div>
+        <nav>
+          <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#objectives">Learning Objectives</a>
+            <a href="#prereqs">Prerequisites</a>
+            <a href="#assessment">Grading</a>
+            <a href="#schedule">Weekly Schedule</a>
+            <a href="#policies">Policies</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- LEFT COLUMN -->
+    <section aria-label="Main content">
+      <article class="card" id="overview">
+        <h2>Course Overview</h2>
+
+        <h3>Logistics</h3>
+        <dl>
+          <dt>Instructor</dt>
+          <dd>Prof. Emery Berger (CICS, UMass Amherst) — <a href="mailto:emery@cs.umass.edu">emery@cs.umass.edu</a></dd>
+
+          <dt>Office</dt>
+          <dd>CSW 378</dd>
+
+          <dt>TAs</dt>
+          <dd>TBD</dd>
+
+          <dt>Appointment Hours</dt>
+          <dd>TBD</dd>
+
+          <dt>Meeting Times &amp; Location</dt>
+          <dd>MW 4:00pm–5:15pm · CSW 140</dd>
+
+          <dt>Delivery Mode</dt>
+          <dd class="stacked">
+            <span>In-person only, non-hybrid.</span>
+            <span class="notice">No lecture recordings will be available.</span>
+          </dd>
+
+          <dt>Contact Hours</dt>
+          <dd>150 minutes/week (2 × 75-minute lectures)</dd>
+        </dl>
+
+        <h3>Course Description</h3>
+        <p>
+          This course provides a systematic treatment of <strong>performance engineering</strong>—the analysis, measurement, and optimization of software systems. It covers how performance emerges from the interaction between algorithms, programming languages, compilers, operating systems, and modern hardware.
+        </p>
+        <p>
+          Topics include algorithmic complexity, caching and memory hierarchies, concurrency and synchronization, vectorization, compiler and runtime optimizations, and profiling techniques for both CPU and GPU/accelerator execution. Students will conduct detailed performance studies, apply advanced profiling tools, and design and evaluate optimizations for real systems. The course emphasizes quantitative reasoning, experimental rigor, and clear performance reporting.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">Algorithmic complexity</span>
+          <span class="pill">CPU &amp; GPU profiling</span>
+          <span class="pill">Memory hierarchies</span>
+          <span class="pill">Concurrency</span>
+          <span class="pill">Performance modeling</span>
+          <span class="pill">Python &amp; C/C++</span>
+        </div>
+      </article>
+
+      <article class="card" id="objectives">
+        <h2>Student Learning Objectives</h2>
+        <p>By the end of the course, students will be able to:</p>
+        <ul>
+          <li>Design statistically sound performance experiments and interpret results (confidence intervals, variance control).</li>
+          <li>Use profilers to diagnose front-end, back-end, and memory bottlenecks.</li>
+          <li>Understand and diagnose memory-, allocator-, and synchronization-related pathologies; select and validate alternatives.</li>
+          <li>Model performance and reason about tail latency.</li>
+          <li>Optimize Python and C/C++ code and validate gains with rigorous before/after evidence.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="prereqs">
+        <h2>Prerequisites &amp; Materials</h2>
+
+        <h3>Prerequisites</h3>
+        <p class="muted">
+          COMPSCI 490PF meets with COMPSCI 690PF. Instructor consent is required for COMPSCI 490PF.
+        </p>
+        <ul>
+          <li>Junior and senior CS majors with grades of at least <strong>A-</strong> in both <strong>COMPSCI 230</strong> and <strong>COMPSCI 377</strong> are the level of background in systems that is expected.</li>
+          <li>Past documented experience with GitHub projects is strongly preferred.</li>
+          <li>This course is project- and experiment-intensive.</li>
+          <li>Students will analyze real software systems, perform quantitative performance measurements, and report results using professional standards.</li>
+          <li>Familiarity with both <strong>C/C++</strong> and <strong>Python</strong> is expected.</li>
+          <li>Undergraduate and graduate sections meet together but have distinct project expectations and grading criteria.</li>
+          <li>Enrollment is capped to support in-depth mentoring and evaluation.</li>
+        </ul>
+
+        <h3>Materials &amp; Tools</h3>
+        <ul>
+          <li>Readings: Research papers and tool documentation, made available online.</li>
+        </ul>
+
+        <h3>Credit-Hour Expectation</h3>
+        <p>
+          This 3-credit course expects approximately <strong>9 hours/week</strong> of out-of-class work (readings, problem-solving, projects, oral-exam preparation), in addition to 150 minutes of weekly contact time.
+        </p>
+      </article>
+
+      <article class="card" id="assessment">
+        <h2>Assessment &amp; Grading</h2>
+
+        <h3>Components &amp; Weights</h3>
+        <ul>
+          <li><strong>Projects and Homework</strong> — 20%</li>
+          <li><strong>Attendance</strong> — 10%</li>
+          <li><strong>Exams (written/oral)</strong> — 70%</li>
+        </ul>
+
+        <h3>Oral Exam Format &amp; Expectations (if applicable)</h3>
+        <ul>
+          <li><strong>Length:</strong> ~18–20 minutes per student, individual.</li>
+          <li><strong>Structure:</strong> Short scenario(s) + whiteboard reasoning + brief code/profiling interpretation.</li>
+          <li><strong>Coverage:</strong> Everything up to that point (Midterm), and cumulative with emphasis on later topics (Final).</li>
+          <li><strong>Rubric (equal parts):</strong>
+            <ul>
+              <li>Technical accuracy</li>
+              <li>Methodology and attribution reasoning</li>
+              <li>Clarity and communication</li>
+              <li>Evidence-based decision-making</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Grading Scale</h3>
+        <div class="two-col">
+          <div>
+            <h3>COMPSCI 490PF</h3>
+            <table class="grade-table">
+              <tr><th>Grade</th><th>Range</th></tr>
+              <tr><td>A</td><td>&ge; 93</td></tr>
+              <tr><td>A-</td><td>90–92</td></tr>
+              <tr><td>B+</td><td>87–89</td></tr>
+              <tr><td>B</td><td>83–86</td></tr>
+              <tr><td>B-</td><td>80–82</td></tr>
+              <tr><td>C+</td><td>77–79</td></tr>
+              <tr><td>C</td><td>73–76</td></tr>
+              <tr><td>C-</td><td>70–72</td></tr>
+              <tr><td>D+</td><td>67–69</td></tr>
+              <tr><td>D</td><td>63–66</td></tr>
+              <tr><td>F</td><td>&le; 62</td></tr>
+            </table>
+          </div>
+          <div>
+            <h3>COMPSCI 690PF</h3>
+            <table class="grade-table">
+              <tr><th>Grade</th><th>Range</th></tr>
+              <tr><td>A</td><td>&ge; 93</td></tr>
+              <tr><td>A-</td><td>90–92</td></tr>
+              <tr><td>B+</td><td>87–89</td></tr>
+              <tr><td>B</td><td>83–86</td></tr>
+              <tr><td>B-</td><td>80–82</td></tr>
+              <tr><td>C+</td><td>77–79</td></tr>
+              <tr><td>C</td><td>73–76</td></tr>
+              <tr><td>F</td><td>&le; 72</td></tr>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="schedule">
+        <h2>Weekly Schedule &amp; Key Readings</h2>
+
+        <div class="schedule-week">
+          <div class="week-title">W1 — Principles &amp; Pitfalls; Reproducibility</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Butler Lampson, “Hints for Computer System Design.” (extended and updated version)</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W2 — Methodology You Can Trust</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Mytkowicz et al., “Producing Wrong Data Without Doing Anything Obviously Wrong!”</li>
+            <li>Curtsinger &amp; Berger, “Stabilizer: Statistically Sound Performance Evaluation.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W3 — Top-Down Microarchitectural Analysis (TMA)</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Yasin, “A Top-Down Method for Performance Analysis.”</li>
+          </ul>
+          <p class="muted">In class: profiler walkthrough; classify workloads (front-end vs memory bound).</p>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W4 — Memory Hierarchy &amp; NUMA</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Ulrich Drepper, “What Every Programmer Should Know About Memory.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W5 — Modeling: Amdahl/Gustafson, Roofline, Little’s Law</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Williams/Waterman/Patterson, “Roofline: an insightful visual performance model for multicore architectures.”</li>
+            <li>John Gustafson, “Reevaluating Amdahl’s Law.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W6 — Causal Profiling (Coz)</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Curtsinger &amp; Berger, “Coz: Finding Code that Counts with Causal Profiling.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W7 — Memory Allocators &amp; Fragmentation</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Berger et al., “Hoard: A Scalable Memory Allocator for Multithreaded Applications.”</li>
+            <li>Powers et al., “Mesh: Compacting Memory for C/C++ Applications.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W8 — Concurrency &amp; Synchronization</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Mellor-Crummey &amp; Scott, “Algorithms for Scalable Synchronization…” (MCS).</li>
+            <li>McKenney &amp; Walpole, “Read-Copy Update.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W9 — Tail Latency in Distributed Systems</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Dean &amp; Barroso, “The Tail at Scale.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W10 — Python Performance in Practice</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Berger et al., “Triangulating Python Performance Issues with Scalene.”</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W11 — Vectorization &amp; GPUs</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Roofline resources (CPU/GPU variants).</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W12 — Benchmarking the Right Way</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Jim Gray, “A Measure of Transaction Processing Power.” and follow-on twenty years later.</li>
+            <li>Gernot Heiser, “Benchmarking Crimes.”</li>
+            <li>SIGPLAN Empirical Evaluation Guidelines.</li>
+          </ul>
+        </div>
+
+        <div class="schedule-week">
+          <div class="week-title">W13 — Case Studies &amp; War Stories</div>
+          <div class="muted">Readings:</div>
+          <ul class="reading-list">
+            <li>Selected postmortems.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="policies">
+        <h2>Course Policies</h2>
+
+        <h3>Attendance</h3>
+        <p>
+          Attendance is expected; many meetings include in-class activities. For religious observance, following UMass policy, notify the instructor in advance; reasonable accommodations will be provided.
+        </p>
+
+        <h3>Late &amp; Make-Up Work</h3>
+        <ul>
+          <li><strong>Projects and homework:</strong> one full letter grade dropped for every day late (including weekends and vacation days). Extensions require documented circumstances.</li>
+          <li><strong>Oral exams (if applicable):</strong> scheduled windows with sign-ups; missed slots require documented circumstances for a make-up.</li>
+        </ul>
+
+        <h3>Communication</h3>
+        <p>
+          Email or course forum (if applicable). For deeper issues, use student hours.
+        </p>
+
+        <h3>Generative AI Policy</h3>
+        <div class="highlight-box">
+          <p>
+            You may use generative AI tools only when <strong>explicitly allowed</strong> and with <strong>full disclosure</strong> (tool, prompt, how you validated outputs).
+          </p>
+          <p>
+            Undisclosed or prohibited use may violate academic integrity. You are responsible for the technical correctness of any AI-assisted work and must reproduce all results independently.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- RIGHT COLUMN / POLICY SIDEBAR -->
+    <aside aria-label="Institutional policies and resources">
+      <section class="card">
+        <h2>Academic Integrity</h2>
+        <p class="muted">
+          UMass Amherst is strongly committed to academic integrity, defined as completing all academic work without cheating, lying, stealing, or receiving unauthorized assistance.
+        </p>
+        <p>
+          Academic dishonesty is prohibited in all programs and includes, but is not limited to: cheating, fabrication, plagiarism, lying, and facilitating dishonesty, via analogue and digital means.
+        </p>
+        <p>
+          Sanctions may be imposed on any student who has committed or participated in an academic integrity infraction. Any person who has reason to believe that a student has committed an academic integrity infraction should bring such information to the attention of the appropriate course instructor as soon as possible.
+        </p>
+        <p class="muted">
+          All students at the University of Massachusetts Amherst have read and acknowledged the Commitment to Academic Integrity and are knowingly responsible for completing all work with integrity and in accordance with the policy.
+        </p>
+        <p>
+          <a href="https://www.umass.edu/senate/book/academic-regulations-academic-integrity-policy" target="_blank" rel="noopener noreferrer">
+            Academic Integrity Policy (UMass Amherst)
+          </a>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Accommodations</h2>
+        <p>
+          The University of Massachusetts Amherst is committed to making reasonable, effective, and appropriate accommodations to meet the needs of students with disabilities and help create a barrier-free campus.
+        </p>
+        <p>
+          If you have a disability and require accommodations, please register with Disability Services, meet with an Access Coordinator, and send your accommodation letter to your faculty.
+        </p>
+        <p>
+          Information on services and registration:
+        </p>
+        <p>
+          <a href="https://www.umass.edu/disability/" target="_blank" rel="noopener noreferrer">
+            Disability Services Website
+          </a>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Title IX</h2>
+        <p>
+          In accordance with Title IX of the Education Amendments of 1972, UMass Amherst is committed to providing a safe learning environment for all students, free from all forms of discrimination, including sexual assault, sexual harassment, domestic violence, dating violence, stalking, and retaliation. This includes interactions in person or online through digital platforms and social media.
+        </p>
+        <p>
+          Title IX also protects against discrimination on the basis of pregnancy, childbirth, false pregnancy, miscarriage, abortion, or related conditions, including recovery.
+        </p>
+        <p>
+          A summary of available Title IX resources (confidential and non-confidential) can be found here:
+        </p>
+        <p>
+          <a href="https://www.umass.edu/titleix/resources" target="_blank" rel="noopener noreferrer">
+            UMass Title IX Resources
+          </a>
+        </p>
+        <p>
+          If you need immediate support, you are not alone. Free and confidential support is available:
+        </p>
+        <p><strong>SASA Hotline:</strong> <code>413-545-0800</code> (24/7/365)</p>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <span>&copy; <span id="year"></span> COMPSCI 490PF/690PF · Performance Engineering</span>
+      <span>Instructor: Prof. Emery Berger</span>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
