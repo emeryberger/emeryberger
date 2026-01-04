@@ -1,7 +1,7 @@
 # Emery Berger
 
 Professor, Computer Science, Univ. of Massachusetts Amherst, Amazon Scholar at Amazon Web Services.
-My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am the creator/maintainer of https://CSrankings.org. For the academic year 2024/2025, I am splitting my time between UMass and Amazon.
+My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab build innovative and impactful systems, especially focused on performance, reliability, and security. Among other things, I am the creator/maintainer of https://CSrankings.org. For the academic year 2025/2026, I am splitting my time between UMass and Amazon.
 
 [Current CV](https://github.com/emeryberger/emeryberger/blob/main/vita.pdf)
 
@@ -21,7 +21,6 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 - Personal GitHub: [![EmeryBerger](https://img.shields.io/github/stars/emeryberger?style=social)](https://github.com/emeryberger)
 - Bluesky: [@emeryberger.bsky.social](https://bsky.app/profile/emeryberger.bsky.social)
 - Mastodon: [![Mastodon Follow](https://img.shields.io/mastodon/follow/109334066336092137?domain=https%3A%2F%2Fdiscuss.systems&style=social)](https://discuss.systems/@emeryberger)
-- Twitter: [@emeryberger](https://twitter.com/emeryberger)
 - YouTube: [![views](https://img.shields.io/youtube/channel/views/UCIPi_mHiQ6FoMgMej51s-lA?style=social)](https://www.youtube.com/@EmeryBerger)
 - [emeryberger.com](https://emeryberger.com), [Medium blog](https://emeryberger.medium.com)
 - Publications: [Google Scholar](https://scholar.google.com/citations?user=RaHaArkAAAAJ&hl=en), [DBLP](https://dblp.org/pid/98/4487.html)
@@ -99,25 +98,31 @@ The second most popular Strange Loop video of all time!
   [![Scalene (PyCon 2021)](https://img.youtube.com/vi/nrQPqy3YY5A/0.jpg)](https://youtu.be/nrQPqy3YY5A)
 
 [How to Get Your Research Adopted (PLDI keynote)](https://youtu.be/kwto0AQ_Un8) ![views](https://img.shields.io/youtube/views/kwto0AQ_Un8)  
-  [![PLDI 2022 keynote](https://img.youtube.com/vi/kwto0AQ_Un8/0.jpg)]([https://youtu.be/kwto0AQ_Un8](https://www.youtube.com/watch?v=kwto0AQ_Un8))
+  [![PLDI 2022 keynote](https://img.youtube.com/vi/kwto0AQ_Un8/0.jpg)](https://youtu.be/kwto0AQ_Un8)
   
 ## Selected Papers
 
-- [**Triangulating Python Performance with Scalene**](https://www.usenix.org/system/files/osdi23-berger.pdf) (OSDI 2023, Best Paper Award)   
+- [**ChatDBG: An AI-Powered Debugging Assistant**](https://doi.org/10.1145/3729355) (FSE 2025, Distinguished Artifact Award)
+  Integrates LLMs into debuggers to enable root cause analysis and bug fixing. [[software](https://github.com/plasma-umass/ChatDBG)]
+- [**Triangulating Python Performance with Scalene**](https://www.usenix.org/system/files/osdi23-berger.pdf) (OSDI 2023, Best Paper Award)
   Introduces Scalene, a profiler that highlights Python performance issues. [[software](https://github.com/plasma-umass/scalene)]
-- [**Coz: Finding Code that Counts with Causal Profiling**](http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf) (Best Paper Award SOSP 2015, CACM Research Highlight)   
+- [**Coz: Finding Code that Counts with Causal Profiling**](https://doi.org/10.1145/2815400.2815409) (Best Paper Award SOSP 2015, CACM Research Highlight)
   Introduces causal profiling and the Coz profiler. [[software](https://github.com/plasma-umass/coz)]
-- [**Mesh: Compacting Memory Management for C/C++ Applications**](https://people.cs.umass.edu/~mcgregor/papers/19-pldi.pdf) (PLDI 2019)   
+- [**Mesh: Compacting Memory Management for C/C++ Applications**](https://doi.org/10.1145/3314221.3314582) (PLDI 2019)
   A drop-in replacement for `malloc` that eliminates fragmentation. [[software](https://github.com/plasma-umass/mesh)]
-- [**BLeak: Automatically Debugging Memory Leaks in Web Applications**](https://jvilk.com/assets/pdf/bleak.pdf) (PLDI 2018, CACM Research Highlight)   
+- [**BLeak: Automatically Debugging Memory Leaks in Web Applications**](https://doi.org/10.1145/3192366.3192376) (PLDI 2018, CACM Research Highlight)
   Detects memory leaks in web applications automatically. [[software](https://github.com/plasma-umass/BLeak)] [_incorporated into Android Studio_](https://cs.android.com/android-studio/platform/tools/adt/idea/+/mirror-goog-studio-main:bleak/src/com/android/tools/idea/bleak/Bleak.kt)
-- [**Stabilizer: Statistically Sound Performance Evaluation**](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) (ASPLOS 2013)   
+- [**DieHard: Probabilistic Memory Safety for Unsafe Languages**](https://doi.org/10.1145/1133981.1134000) (PLDI 2016, Most Influential Paper)
+  An error-avoiding memory allocator; influenced the design of the Windows 7 Fault-Tolerant Heap. [[software](https://github.com/emeryberger/DieHard)]
+- [**DieHarder: Securing the Heap**](https://doi.org/10.1145/1866307.1866371) (CCS 2010)
+  A secure memory allocator; inspired hardening changes in the Windows 8 heap. [[software](https://github.com/emeryberger/DieHard)]
+- [**Stabilizer: Statistically Sound Performance Evaluation**](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) (ASPLOS 2013)
   Randomizes everything to see if performance changes are real.
   [_incorporated into WebAssembly benchmarking infrastructure_](https://mastodon.world/@cfallin/109833747279454645)
-- [**Reconsidering Custom Memory Allocation**](https://people.cs.umass.edu/~emery/pubs/berger-oopsla2002.pdf) (OOPSLA 2012, Most Influential Paper)   
+- [**Reconsidering Custom Memory Allocation**](https://people.cs.umass.edu/~emery/pubs/berger-oopsla2002.pdf) (OOPSLA 2012, Most Influential Paper)
   Shows which kinds of custom memory allocators are useful for improving performance (TL;DR - not many).
-- [**Hoard: A Scalable Memory Allocator for Multithreaded Applications**](https://people.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf) (ASPLOS 2000, ASPLOS Most Influential Paper)   
-  The first scalable `malloc`. [[software](https://github.com/emeryberger/Hoard)] [_incorporated into the Mac OS X allocator_](https://opensource.apple.com/source/libmalloc/libmalloc-116.50.8/src/magazine_malloc.c.auto.html)
+- [**Hoard: A Scalable Memory Allocator for Multithreaded Applications**](https://doi.org/10.1145/378993.379232) (ASPLOS 2019, Most Influential Paper)
+  The first scalable `malloc`; [Hoard algorithm integrated into the Mac allocator](https://opensource.apple.com/source/libmalloc/libmalloc-116.50.8/src/magazine_malloc.c.auto.html). [[software](https://github.com/emeryberger/Hoard)]
 
 ## Bio
 
@@ -125,4 +130,4 @@ Emery Berger is a Professor in the [Manning College of Information and Computer 
 
 Professor Berger’s research spans programming languages, runtime systems, and operating systems, with a particular focus on systems that transparently improve reliability, security, and performance. He and his collaborators have created a number of influential software systems including [Hoard](https://github.com/emeryberger/Hoard), a fast and scalable memory manager that accelerates multithreaded applications (used by companies including British Telecom, Cisco, Crédit Suisse, Reuters, Royal Bank of Canada, SAP, and Tata, and [on which the Mac OS X memory manager is based](http://emeryblogger.wordpress.com/2010/10/26/im-a-mac-or-emery-inside/)); [DieHard](https://github.com/emeryberger/DieHard), an error-avoiding memory manager that [directly influenced the design of the Windows 7 Fault-Tolerant Heap](http://emeryblogger.wordpress.com/2010/04/06/winning-the-war-on-bugs/); and DieHarder, a secure memory manager that was an inspiration for hardening changes made to the Windows 8 heap (see this map of the [landscape of memory management research](https://github.com/plasma-umass/memory-landscape) for an overview). He also created and maintains the widely-used [CSrankings](https://csrankings.org) website.
 
-His honors include a Microsoft Research Fellowship, an [NSF CAREER Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0347339), a Lilly Teaching Fellowship, the [Distinguished Artifact Award for PLDI 2014](http://pldi14-aec.cs.brown.edu/), the [Most Influential Paper Award at OOPSLA 2012](http://sigplan.org/Awards/OOPSLA/), the [Most Influential Paper Award at PLDI 2016](http://www.sigplan.org/Awards/PLDI/), the [ASPLOS 2019 Influential Paper Award](https://www.sigops.org/2019/asplos-influential-paper-2019-winner/), [**five** SIGPLAN Research Highlights](https://www.sigplan.org/Highlights/Papers/), **five** CACM Research Highlights ([1](https://doi.org/10.1145/1409360.1409382), [2](https://doi.org/10.1145/2927928), [3](https://doi.org/10.1145/3205911), [4](https://doi.org/10.1145/3422598), [5](https://doi.org/10.1145/3474385)), a Google Research Award, a [Microsoft SEIF Award](https://www.microsoft.com/en-us/research/blog/2013-seif-awards-support-researchers-in-software-engineering/), and Best Paper Awards at [FAST](https://www.usenix.org/conference/fast-07/tfs-transparent-file-system-contributory-storage), [OOPSLA](https://dl.acm.org/doi/10.1145/2660193.2660206), and [SOSP](https://dl.acm.org/doi/10.1145/2815400.2815409). Professor Berger served two terms ([1](https://web.archive.org/web/20160202121436/http://www.sigplan.org/ContactUs/), [2](https://web.archive.org/web/20190611000048/https://sigplan.org/ContactUs/)) as an elected member of the SIGPLAN Executive Committee; he served for a decade (2007-2017) as Associate Editor of the ACM Transactions on Programming Languages and Systems, was [Program Chair for PLDI 2016](https://pldi16.sigplan.org/committee/pldi-2016-program-committee), and served as [co-Program Chair of ASPLOS 2021](https://asplos-conference.org/2021/index.html%3Fp=44.html). He was named an [ACM Fellow in 2019](https://awards.acm.org/award_winners/berger_4417531).
+His honors include the [ACM SIGPLAN Distinguished Service Award (2024)](https://www.sigplan.org/Awards/Service/), a Microsoft Research Fellowship, an [NSF CAREER Award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0347339), a Lilly Teaching Fellowship, the [Distinguished Artifact Award for PLDI 2014](http://pldi14-aec.cs.brown.edu/), the [Most Influential Paper Award at OOPSLA 2012](http://sigplan.org/Awards/OOPSLA/), the [Most Influential Paper Award at PLDI 2016](http://www.sigplan.org/Awards/PLDI/), the [ASPLOS 2019 Influential Paper Award](https://www.sigops.org/2019/asplos-influential-paper-2019-winner/), [**five** SIGPLAN Research Highlights](https://www.sigplan.org/Highlights/Papers/), **five** CACM Research Highlights ([1](https://doi.org/10.1145/1409360.1409382), [2](https://doi.org/10.1145/2927928), [3](https://doi.org/10.1145/3205911), [4](https://doi.org/10.1145/3422598), [5](https://doi.org/10.1145/3474385)), a Google Research Award, a [Microsoft SEIF Award](https://www.microsoft.com/en-us/research/blog/2013-seif-awards-support-researchers-in-software-engineering/), and Best Paper Awards at [FAST](https://www.usenix.org/conference/fast-07/tfs-transparent-file-system-contributory-storage), [OOPSLA](https://dl.acm.org/doi/10.1145/2660193.2660206), [OSDI](https://www.usenix.org/conference/osdi23/technical-sessions), and [SOSP](https://dl.acm.org/doi/10.1145/2815400.2815409). Professor Berger served two terms ([1](https://web.archive.org/web/20160202121436/http://www.sigplan.org/ContactUs/), [2](https://web.archive.org/web/20190611000048/https://sigplan.org/ContactUs/)) as an elected member of the SIGPLAN Executive Committee; he served for a decade (2007-2017) as Associate Editor of the ACM Transactions on Programming Languages and Systems, was [Program Chair for PLDI 2016](https://pldi16.sigplan.org/committee/pldi-2016-program-committee), and served as [co-Program Chair of ASPLOS 2021](https://asplos-conference.org/2021/index.html%3Fp=44.html). He was named an [ACM Fellow in 2019](https://awards.acm.org/award_winners/berger_4417531).
