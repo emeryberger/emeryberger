@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Schedule - COMPSCI 490PF/690PF: Performance Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2933;
+      --danger: #f97373;
+      --mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 40%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 1rem 2rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      max-width: 960px;
+      margin: 2.5rem auto 1.5rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
+      border-radius: 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 18px 45px rgba(15, 23, 42, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.15), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(248, 250, 252, 0.05), transparent 50%);
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    header>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .course-code {
+      font-size: 0.9rem;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .course-code span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      margin-bottom: 0.4rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .meta strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    nav {
+      max-width: 960px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 0.6rem 1.2rem;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav a.active {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent);
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    section {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 1.1rem;
+      border: 1px solid rgba(30, 64, 175, 0.7);
+      padding: 1.5rem 1.6rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.7);
+    }
+
+    section h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    .schedule-week {
+      margin-bottom: 1rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px dashed rgba(55, 65, 81, 0.8);
+    }
+
+    .schedule-week:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .schedule-heading {
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .reading-list {
+      margin-top: 0.15rem;
+    }
+
+    .reading-list li {
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    .footnote {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="course-code">
+      <span class="dot"></span>
+      COMPSCI 490PF / 690PF
+      <span>•</span>
+      3 credits
+    </div>
+    <h1>Performance Engineering</h1>
+    <div class="meta">
+      <div><strong>Instructor:</strong> <a href="https://emeryberger.com">Prof. Emery Berger</a></div>
+      <div><strong>Email:</strong> <a href="mailto:emery@cs.umass.edu">emery@cs.umass.edu</a></div>
+      <div><strong>Office:</strong> CS 378</div>
+      <div><strong>Meeting times:</strong> MW 4:00–5:15pm (CS 140)</div>
+    </div>
+    <div class="meta" style="margin-top: 0.4rem;">
+      <div><strong>TA:</strong> Kyla Levin (<a href="mailto:khlevin@umass.edu">khlevin@umass.edu</a>)</div>
+      <div><strong>TA Office Hours:</strong> Tuesdays & Fridays, 1–2pm (CS 207)</div>
+      <div><strong>Delivery mode:</strong> In-person only; no hybrid, no recordings</div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="schedule.html" class="active">Class Schedule</a>
+    <a href="syllabus.html">Syllabus</a>
+  </nav>
+
+  <main>
+    <section id="schedule">
+      <h2>Weekly Schedule (Topics &amp; Key Readings)</h2>
+      <p style="margin-bottom: 1.2rem; color: var(--muted);">
+        Readings assigned for each week are expected to be completed by the first class of that week so that they can
+        be discussed in class.
+      </p>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 1 (2/2 – 2/6) — Principles &amp; Pitfalls; Reproducibility</div>
+        <ul class="reading-list">
+          <li>
+            Butler Lampson,
+            <a href="https://arxiv.org/pdf/2011.02455" target="_blank" rel="noopener">
+              "Hints for Computer System Design" (extended/updated version)
+            </a>.
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 2 (2/9 – 2/13) — Methodology You Can Trust</div>
+        <ul class="reading-list">
+          <li>
+            Mytkowicz et al.,
+            <a href="https://users.cs.northwestern.edu/~robby/courses/322-2013-spring/mytkowicz-wrong-data.pdf"
+              target="_blank" rel="noopener">
+              "Producing Wrong Data Without Doing Anything Obviously Wrong!"
+            </a>
+          </li>
+          <li>
+            Curtsinger &amp; Berger,
+            <a href="https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf" target="_blank" rel="noopener">
+              "Stabilizer: Statistically Sound Performance Evaluation"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 3 (2/16 – 2/20) — Top-Down Microarchitectural Analysis (TMA)</div>
+        <div class="schedule-heading">No class on Monday 2/16, class moved to Thursday 2/19.</div>
+        <ul class="reading-list">
+          <li>
+            Yasin,
+            <a href="https://rcs.uwaterloo.ca/~ali/cs854-f23/papers/topdown.pdf" target="_blank" rel="noopener">
+              "A Top-Down Method for Performance Analysis"
+            </a>
+          </li>
+        </ul>
+        <p class="footnote">In class: profiler walkthrough; classify workloads (front-end vs memory bound).</p>
+      </div>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 4 (2/23 – 2/27) — Memory Hierarchy &amp; NUMA</div>
+        <ul class="reading-list">
+          <li>
+            Ulrich Drepper,
+            <a href="http://www.akkadia.org/drepper/cpumemory.pdf" target="_blank" rel="noopener">
+              "What Every Programmer Should Know About Memory"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 5 (3/2 – 3/6) — Modeling: Amdahl/Gustafson, Roofline, Little's Law</div>
+        <ul class="reading-list">
+          <li>
+            Williams, Waterman &amp; Patterson,
+            <a href="https://dl.acm.org/doi/pdf/10.1145/1498765.1498785" target="_blank" rel="noopener">
+              "Roofline: An Insightful Visual Performance Model for Multicore Architectures"
+            </a>
+          </li>
+          <li>
+            John Gustafson,
+            <a href="https://dl.acm.org/doi/pdf/10.1145/42411.42415" target="_blank" rel="noopener">
+              "Reevaluating Amdahl's Law"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 6 (3/9 – 3/13) — Causal Profiling (Coz)</div>
+        <ul class="reading-list">
+          <li>
+            Curtsinger &amp; Berger,
+            <a href="https://sigops.org/s/conferences/sosp/2015/current/2015-Monterey/printable/090-curtsinger.pdf"
+              target="_blank" rel="noopener">
+              "Coz: Finding Code that Counts with Causal Profiling"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 7 (3/16 – 3/20) — Spring Break</div>
+        <div class="schedule-heading">No classes this week.</div>
+      </div>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 8 (3/23 – 3/27) — Memory Allocators &amp; Fragmentation</div>
+        <ul class="reading-list">
+          <li>
+            Berger et al.,
+            <a href="https://www.cs.utexas.edu/~mckinley/papers/asplos-2000.pdf" target="_blank" rel="noopener">
+              "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
+            </a>
+          </li>
+          <li>
+            Powers et al.,
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3314221.3314582" target="_blank" rel="noopener">
+              "Mesh: Compacting Memory for C/C++ Applications"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 9 (3/30 – 4/3) — Concurrency &amp; Synchronization</div>
+        <ul class="reading-list">
+          <li>
+            Mellor-Crummey &amp; Scott,
+            <a href="https://dl.acm.org/doi/pdf/10.1145/103727.103729" target="_blank" rel="noopener">
+              "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors"
+            </a>
+          </li>
+          <li>
+            McKenney &amp; Walpole,
+            <a href="https://www.kernel.org/doc/ols/2001/read-copy.pdf" target="_blank" rel="noopener">
+              "Read-Copy Update"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 10 (4/6 – 4/10) — Tail Latency in Distributed Systems</div>
+        <ul class="reading-list">
+          <li>
+            Dean &amp; Barroso,
+            <a href="https://dl.acm.org/doi/pdf/10.1145/2408776.2408794" target="_blank" rel="noopener">
+              "The Tail at Scale"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 11 (4/13 – 4/17) — Python Performance in Practice</div>
+        <ul class="reading-list">
+          <li>
+            Berger et al.,
+            <a href="https://www.usenix.org/system/files/osdi23-berger.pdf" target="_blank" rel="noopener">
+              "Triangulating Python Performance Issues with Scalene"
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 12 (4/20 – 4/24) — Vectorization &amp; GPUs</div>
+        <div class="schedule-heading">No class on Monday 4/20, class moved to Friday 4/24.</div>
+        <ul class="reading-list">
+          <li>
+            Roofline resources (CPU/GPU variants), e.g.
+            <a href="https://crd.lbl.gov/assets/pubs_presos/SC09-roofline.pdf" target="_blank" rel="noopener">
+              LBL Roofline Model tutorial
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 13 (4/27 – 5/1) — Benchmarking the Right Way</div>
+        <ul class="reading-list">
+          <li>
+            Jim Gray,
+            <a href="https://infolab.usc.edu/csci599/Fall2008/papers/c-2a.pdf" target="_blank" rel="noopener">
+              "A Measure of Transaction Processing Power"
+            </a>
+          </li>
+          <li>
+            Jim Gray (20 years later),
+            <a href="https://arxiv.org/pdf/cs/0701162" target="_blank" rel="noopener">
+              "A Measure of Transaction Processing Power — 20 Years Later"
+            </a>
+          </li>
+          <li>
+            Gernot Heiser,
+            <a href="https://gernot-heiser.org/benchmarking-crimes.html" target="_blank" rel="noopener">
+              "Systems Benchmarking Crimes"
+            </a>
+          </li>
+          <li>
+            ACM SIGPLAN,
+            <a href="https://www.sigplan.org/Resources/EmpiricalEvaluation/" target="_blank" rel="noopener">
+              Empirical Evaluation Guidelines
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-week">
+        <div class="schedule-heading">Week 14 (5/4 – 5/8) — Case Studies &amp; War Stories</div>
+        <ul class="reading-list">
+          <li>
+            Selected postmortems, e.g.
+            <a href="https://github.com/danluu/post-mortems" target="_blank" rel="noopener">
+              curated postmortem collection by Dan Luu
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

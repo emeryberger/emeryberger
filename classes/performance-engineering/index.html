@@ -118,6 +118,35 @@
       font-weight: 600;
     }
 
+    nav {
+      max-width: 960px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 0.6rem 1.2rem;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav a.active {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent);
+    }
+
     main {
       max-width: 960px;
       margin: 0 auto;
@@ -169,18 +198,6 @@
       margin-bottom: 0.25rem;
     }
 
-    .pill {
-      display: inline-block;
-      padding: 0.15rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-right: 0.4rem;
-    }
-
     .sidebar section {
       background: rgba(15, 23, 42, 0.94);
       border-color: rgba(30, 64, 175, 0.8);
@@ -215,53 +232,6 @@
       border-color: rgba(248, 113, 113, 0.7);
       color: #fecaca;
     }
-
-    .schedule-week {
-      margin-bottom: 1rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px dashed rgba(55, 65, 81, 0.8);
-    }
-
-    .schedule-week:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .schedule-heading {
-      font-weight: 600;
-      font-size: 0.98rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .reading-list {
-      margin-top: 0.15rem;
-    }
-
-    .reading-list li {
-      margin-bottom: 0.25rem;
-      font-size: 0.95rem;
-    }
-
-    code {
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      background: rgba(15, 23, 42, 0.9);
-      padding: 0.08rem 0.35rem;
-      border-radius: 0.3rem;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-    }
-
-    .footnote {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 0.4rem;
-    }
-
-    .danger {
-      color: var(--danger);
-      font-weight: 500;
-    }
   </style>
 </head>
 <body>
@@ -273,23 +243,24 @@
       3 credits
     </div>
     <h1>Performance Engineering</h1>
-    <!-- <p class="subtitle">
-      Systematic analysis, measurement, and optimization of real software systems across the stack:
-      algorithms, languages, compilers, runtimes, OS, and hardware.
-      </p>
-    -->
     <div class="meta">
-      <div><strong>Instructor:</strong> Prof. <a href="https://emeryberger.com">Emery Berger</a> (CICS, UMass Amherst)</div>
+      <div><strong>Instructor:</strong> <a href="https://emeryberger.com">Prof. Emery Berger</a></div>
       <div><strong>Email:</strong> <a href="mailto:emery@cs.umass.edu">emery@cs.umass.edu</a></div>
-      <div><strong>Office:</strong> CSW 378</div>
-      <div><strong>Meeting times:</strong> MW 4:00–5:15pm (CSW 140)</div>
+      <div><strong>Office:</strong> CS 378</div>
+      <div><strong>Meeting times:</strong> MW 4:00–5:15pm (CS 140)</div>
     </div>
     <div class="meta" style="margin-top: 0.4rem;">
-      <div><strong>TAs:</strong> TBD</div>
-      <div><strong>Appointment hours:</strong> TBD</div>
+      <div><strong>TA:</strong> Kyla Levin (<a href="mailto:khlevin@umass.edu">khlevin@umass.edu</a>)</div>
+      <div><strong>TA Office Hours:</strong> Tuesdays & Fridays, 1–2pm (CS 207)</div>
       <div><strong>Delivery mode:</strong> In-person only; no hybrid, no recordings</div>
     </div>
   </header>
+
+  <nav>
+    <a href="index.html" class="active">Overview</a>
+    <a href="schedule.html">Class Schedule</a>
+    <a href="syllabus.html">Syllabus</a>
+  </nav>
 
   <main>
     <div class="main">
@@ -322,297 +293,6 @@
         </ul>
       </section>
 
-      <section id="prereqs">
-        <h2>Prerequisites</h2>
-        <p>
-          COMPSCI 490PF meets with COMPSCI 690PF. Instructor consent is required for COMPSCI 490PF.
-          Junior and senior CS majors with grades of at least A- in both COMPSCI 230 and 377 are the
-          level of background in systems that is expected. Past documented experience with GitHub
-          projects is strongly preferred.
-        </p>
-        <p>
-          This course is project- and experiment-intensive. Students will analyze real software systems,
-          perform quantitative performance measurements, and report results using professional standards.
-          Familiarity with both C/C++ and Python is expected. Undergraduate and graduate sections meet
-          together but have distinct project expectations and grading criteria. Enrollment is capped to
-          support in-depth mentoring and evaluation.
-        </p>
-      </section>
-
-      <section id="materials">
-        <h2>Materials &amp; Tools</h2>
-        <p>
-          <strong>Readings:</strong> Research papers and tool documentation, available online (see weekly schedule below).
-        </p>
-      </section>
-
-      <section id="assessment">
-        <h2>Assessments &amp; Grade Weights</h2>
-        <ul>
-          <li>Projects and Homework — 20%</li>
-          <li>Attendance — 10%</li>
-          <li>Exams (written/oral) — 70%</li>
-        </ul>
-
-        <h3>Oral Exam Format &amp; Expectations (if applicable)</h3>
-        <ul>
-          <li>Length: ~18–20 minutes per student; individual.</li>
-          <li>Structure: Short scenario(s) + whiteboard reasoning + brief code/profiling interpretation.</li>
-          <li>Coverage: Everything up to that point (Midterm), and cumulative with emphasis on latter topics (Final).</li>
-          <li>
-            Rubric (equal parts): technical accuracy; methodology and attribution reasoning; clarity and communication;
-            evidence-based decision-making.
-          </li>
-        </ul>
-
-        <h3>Grading Scale</h3>
-        <p><strong>490PF:</strong> A ≥ 93; A- 90–92; B+ 87–89; B 83–86; B- 80–82; C+ 77–79; C 73–76; C- 70–72; D+ 67–69; D 63–66; F ≤ 62.</p>
-        <p><strong>690PF:</strong> A ≥ 93; A- 90–92; B+ 87–89; B 83–86; B- 80–82; C+ 77–79; C 73–76; F ≤ 72.</p>
-      </section>
-
-      <section id="attendance">
-        <h2>Attendance &amp; Policies</h2>
-        <h3>Attendance Policy</h3>
-        <p>
-          Attendance is expected; many meetings include in-class activities. For religious observance, following UMass policy,
-          notify the instructor in advance; reasonable accommodations will be provided.
-        </p>
-
-        <h3>Late &amp; Make-Up Work</h3>
-        <ul>
-          <li>Projects and homework: one full letter grade dropped for every day late (including weekends and vacation days).</li>
-          <li>Extensions require documented circumstances.</li>
-          <li>
-            Oral exams (if applicable): scheduled windows with sign-ups; missed slots require documented circumstances for a make-up.
-          </li>
-        </ul>
-
-        <h3>Communication</h3>
-        <p>
-          Use email or the course forum (if applicable). For deeper issues, use student hours / appointment hours.
-        </p>
-      </section>
-
-      <section id="ai-policy">
-        <h2>Generative AI Policy</h2>
-        <p>
-          You may use generative AI tools only when explicitly allowed and with full disclosure
-          (tool, prompt, how you validated outputs). Undisclosed or prohibited use may violate academic integrity.
-          You are responsible for the technical correctness of any AI-assisted work and must reproduce all results independently.
-        </p>
-      </section>
-
-      <section id="credit-hours">
-        <h2>Credit-Hour Expectation</h2>
-        <p>
-          This 3-credit course expects approximately 9 hours per week of out-of-class work (readings, problem-solving, projects,
-          oral-exam preparation), in addition to 150 minutes of weekly contact time.
-        </p>
-      </section>
-
-      <section id="schedule">
-        <h2>Weekly Schedule (Topics &amp; Key Readings)</h2>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W1 — Principles &amp; Pitfalls; Reproducibility</div>
-          <ul class="reading-list">
-            <li>
-              Butler Lampson,
-              <a href="https://www.microsoft.com/en-us/research/uploads/prod/2016/12/hints.pdf" target="_blank" rel="noopener">
-                “Hints for Computer System Design” (extended/updated version)
-              </a>.
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W2 — Methodology You Can Trust</div>
-          <ul class="reading-list">
-            <li>
-              Mytkowicz et al.,
-              <a href="https://users.cs.northwestern.edu/~robby/courses/322-2013-spring/mytkowicz-wrong-data.pdf" target="_blank" rel="noopener">
-                “Producing Wrong Data Without Doing Anything Obviously Wrong!”
-              </a>
-            </li>
-            <li>
-              Curtsinger &amp; Berger,
-              <a href="https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf" target="_blank" rel="noopener">
-                “Stabilizer: Statistically Sound Performance Evaluation”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W3 — Top-Down Microarchitectural Analysis (TMA)</div>
-          <ul class="reading-list">
-            <li>
-              Yasin,
-              <a href="https://arxiv.org/abs/1411.7624" target="_blank" rel="noopener">
-                “A Top-Down Method for Performance Analysis”
-              </a>
-            </li>
-          </ul>
-          <p class="footnote">In class: profiler walkthrough; classify workloads (front-end vs memory bound).</p>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W4 — Memory Hierarchy &amp; NUMA</div>
-          <ul class="reading-list">
-            <li>
-              Ulrich Drepper,
-              <a href="http://www.akkadia.org/drepper/cpumemory.pdf" target="_blank" rel="noopener">
-                “What Every Programmer Should Know About Memory”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W5 — Modeling: Amdahl/Gustafson, Roofline, Little’s Law</div>
-          <ul class="reading-list">
-            <li>
-              Williams, Waterman &amp; Patterson,
-              <a href="https://people.eecs.berkeley.edu/~kubitron/courses/cs252-S12/handouts/papers/Roofline_ISCA09.pdf" target="_blank" rel="noopener">
-                “Roofline: An Insightful Visual Performance Model for Multicore Architectures”
-              </a>
-            </li>
-            <li>
-              John Gustafson,
-              <a href="https://dl.acm.org/doi/10.1145/42411.42415" target="_blank" rel="noopener">
-                “Reevaluating Amdahl’s Law”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W6 — Causal Profiling (Coz)</div>
-          <ul class="reading-list">
-            <li>
-              Curtsinger &amp; Berger,
-              <a href="https://people.cs.umass.edu/~emery/pubs/coz-sosp15.pdf" target="_blank" rel="noopener">
-                “Coz: Finding Code that Counts with Causal Profiling”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W7 — Memory Allocators &amp; Fragmentation</div>
-          <ul class="reading-list">
-            <li>
-              Berger et al.,
-              <a href="https://people.cs.umass.edu/~emery/pubs/berger-pldi-2000.pdf" target="_blank" rel="noopener">
-                “Hoard: A Scalable Memory Allocator for Multithreaded Applications”
-              </a>
-            </li>
-            <li>
-              Powers et al.,
-              <a href="https://people.cs.umass.edu/~emery/pubs/mesh-pldi19.pdf" target="_blank" rel="noopener">
-                “Mesh: Compacting Memory for C/C++ Applications”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W8 — Concurrency &amp; Synchronization</div>
-          <ul class="reading-list">
-            <li>
-              Mellor-Crummey &amp; Scott,
-              <a href="https://dl.acm.org/doi/10.1145/103727.103729" target="_blank" rel="noopener">
-                “Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors”
-              </a>
-            </li>
-            <li>
-              McKenney &amp; Walpole,
-              <a href="https://www.rdrop.com/users/paulmck/RCU/whatisRCU.pdf" target="_blank" rel="noopener">
-                “Read-Copy Update”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W9 — Tail Latency in Distributed Systems</div>
-          <ul class="reading-list">
-            <li>
-              Dean &amp; Barroso,
-              <a href="https://queue.acm.org/detail.cfm?id=2371297" target="_blank" rel="noopener">
-                “The Tail at Scale”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W10 — Python Performance in Practice</div>
-          <ul class="reading-list">
-            <li>
-              Berger et al.,
-              <a href="https://people.cs.umass.edu/~emery/pubs/scalene-pldi20.pdf" target="_blank" rel="noopener">
-                “Triangulating Python Performance Issues with Scalene”
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W11 — Vectorization &amp; GPUs</div>
-          <ul class="reading-list">
-            <li>
-              Roofline resources (CPU/GPU variants), e.g.
-              <a href="https://crd.lbl.gov/assets/pubs_presos/SC09-roofline.pdf" target="_blank" rel="noopener">
-                LBL Roofline Model tutorial
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W12 — Benchmarking the Right Way</div>
-          <ul class="reading-list">
-            <li>
-              Jim Gray,
-              <a href="https://dl.acm.org/doi/10.1145/289.291" target="_blank" rel="noopener">
-                “A Measure of Transaction Processing Power”
-              </a>
-            </li>
-            <li>
-              Jim Gray (20 years later),
-              <a href="https://dl.acm.org/doi/10.1145/1328897.1328898" target="_blank" rel="noopener">
-                “A Measure of Transaction Processing Power — 20 Years Later”
-              </a>
-            </li>
-            <li>
-              Gernot Heiser,
-              <a href="https://www.cse.unsw.edu.au/~gernot/benchmarking-crimes.pdf" target="_blank" rel="noopener">
-                “Systems Benchmarking Crimes”
-              </a>
-            </li>
-            <li>
-              ACM SIGPLAN,
-              <a href="https://www.sigplan.org/Resources/EmpiricalEvaluation/" target="_blank" rel="noopener">
-                Empirical Evaluation Guidelines
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="schedule-week">
-          <div class="schedule-heading">W13 — Case Studies &amp; War Stories</div>
-          <ul class="reading-list">
-            <li>
-              Selected postmortems, e.g.
-              <a href="https://github.com/danluu/post-mortems" target="_blank" rel="noopener">
-                curated postmortem collection by Dan Luu
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
       <section id="policies">
         <h2>University Policies</h2>
 
@@ -627,7 +307,7 @@
           UMass Amherst is strongly committed to academic integrity, which is defined as completing all academic work without
           cheating, lying, stealing, or receiving unauthorized assistance from any other person, or using any source of
           information not appropriately authorized or attributed. As a community, we hold each other accountable and support
-          each other’s knowledge and understanding of academic integrity.
+          each other's knowledge and understanding of academic integrity.
         </p>
         <p>
           Academic dishonesty is prohibited in all programs of the University and includes but is not limited to: cheating,
@@ -675,15 +355,11 @@
 
     <aside class="sidebar">
       <section>
-        <h2>At a Glance</h2>
-        <div class="badge-row">
-          <span class="badge in-person">In-person only</span>
-          <span class="badge attendance">Attendance expected</span>
-          <span class="badge hardcore">Project &amp; experiment intensive</span>
-        </div>
-        <p><strong>Location:</strong> CSW 140</p>
+        <h2>Class Details</h2>
+        <p><strong>Location:</strong> CS 140 (in-person only)</p>
         <p><strong>Time:</strong> MW 4:00–5:15pm</p>
         <p><strong>Contact hours:</strong> 150 minutes/week</p>
+        <p><strong>Class Communication:</strong> Slack <a href="https://join.slack.com/t/compsci490690-egh2482/shared_invite/zt-3of2uablz-MiOurYdu2V~9VAH_L1h1vQ" target="_blank" rel="noopener">(join here)</a></p>
       </section>
 
       <section>
@@ -696,19 +372,6 @@
           <li>Oral exam preparation</li>
         </ul>
       </section>
-
-      <!--
-      <section>
-        <h2>Keys to Success</h2>
-        <ul>
-          <li>Design experiments carefully; keep raw data and scripts.</li>
-          <li>Use profilers regularly; don’t guess where time goes.</li>
-          <li>Validate every optimization with before/after numbers.</li>
-          <li>Ask questions early—especially on methodology.</li>
-        </ul>
-      </section>
-      -->
-      
     </aside>
   </main>
 </body>
