@@ -27,7 +27,6 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 
 ## PhD Students
 
-- [Kyla Levin](https://khlevin.github.io/KylaHLevin/)
 - [Juan Altmayer Pizzorno](https://jaltmayerpizzorno.github.io/)
 - [Nicolas van Kempen](https://nvankempen.com/)
 
