@@ -57,6 +57,11 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
   [![GitHub stars](https://img.shields.io/github/stars/plasma-umass/coz?style=social&label=Star&maxAge=2592000)](https://GitHub.com/plasma-umass/coz/) [![Rust crate downloads](https://img.shields.io/crates/d/coz)](https://img.shields.io/crates/d/coz) <small>_(just counting Rust crate downloads)_</small>
 - [**CSrankings**](https://csrankings.org): Ranks the world's CS departments  
   [![GitHub stars](https://img.shields.io/github/stars/emeryberger/CSrankings?style=social&label=Star&maxAge=2592000)](https://GitHub.com/emeryberger/CSrankings)
+- [**RightTyper**](https://github.com/righttyper/righttyper): A Python type assistant that automatically generates high-quality types for your code  
+  [![PyPI Latest Release](https://img.shields.io/pypi/v/righttyper.svg)](https://pypi.org/project/righttyper/)
+  [![Downloads](https://pepy.tech/badge/righttyper)](https://pepy.tech/project/righttyper)
+  [![Downloads](https://pepy.tech/badge/righttyper/month)](https://pepy.tech/project/righttyper)
+  [![GitHub stars](https://img.shields.io/github/stars/righttyper/righttyper?style=social&label=Star&maxAge=2592000)](https://GitHub.com/righttyper/righttyper/)
 - [**Slipcover**](https://github.com/plasma-umass/slipcover): Nearly zero-overhead code coverage analysis for Python   
   [![PyPI Latest Release](https://img.shields.io/pypi/v/slipcover.svg)](https://pypi.org/project/slipcover/)
   [![Downloads](https://pepy.tech/badge/slipcover)](https://pepy.tech/project/slipcover)
