@@ -27,13 +27,13 @@ My students, collaborators, and I in the [PLASMA](https://plasma-umass.org) lab 
 
 ### PhD Alumni
 - [Juan Altmayer Pizzorno](https://jaltmayerpizzorno.github.io/)
-- [Nicolas van Kempen](https://nvankempen.com/), Databricks
 - [Dan Barowy](https://www.cs.williams.edu/~dbarowy/), Williams College
 - [Charlie Curtsinger](https://curtsinger.cs.grinnell.edu/), Grinnell College
 - [Matthew Hertz](https://cse.buffalo.edu/~mhertz/), University of Buffalo
 - [Tongping Liu](https://www.linkedin.com/in/tongping-liu-b6b64415/), ByteDance
 - [Gene Novark](https://www.linkedin.com/in/gene-novark-183a4b20/), "Quantitative Hedge Fund"
 - [Bobby Powers](https://www.linkedin.com/in/bobby-powers-0639b81a/), Anthropic
+- [Nicolas van Kempen](https://nvankempen.com/), Databricks
 - [John Vilk](https://jvilk.com/), Stripe
 - [Ting Yang](https://www.linkedin.com/in/tingyang/), Meta (co-advised with Eliot Moss)
 
